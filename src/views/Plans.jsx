@@ -120,6 +120,34 @@ export default function Plans() {
                       />
                       Unlimited renders
                     </li>
+                    <li className="flex gap-x-3">
+                      <CheckIcon
+                        className="h-6 w-5 flex-none text-indigo-600"
+                        aria-hidden="true"
+                      />
+                      High quality renders
+                    </li>
+                    <li className="flex gap-x-3">
+                      <CheckIcon
+                        className="h-6 w-5 flex-none text-indigo-600"
+                        aria-hidden="true"
+                      />
+                      Multiple styles to choose from
+                    </li>
+                    <li className="flex gap-x-3">
+                      <CheckIcon
+                        className="h-6 w-5 flex-none text-indigo-600"
+                        aria-hidden="true"
+                      />
+                      Multiple rooms to select
+                    </li>
+                    <li className="flex gap-x-3">
+                      <CheckIcon
+                        className="h-6 w-5 flex-none text-indigo-600"
+                        aria-hidden="true"
+                      />
+                      Download options
+                    </li>
                   </ul>
                 </div>
                 <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">

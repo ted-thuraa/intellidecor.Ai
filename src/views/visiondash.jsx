@@ -7,6 +7,12 @@ import Skeleton from "../components/skeleton";
 import DropZone from "../components/DropZone";
 import appendNewToName from "../utils/appendNewToName";
 import downloadPhoto from "../utils/downloadPhoto";
+import Original1 from "../assets/images/bad4.jpg";
+import Render1 from "../assets/images/bad4-neww.jpg";
+import Original2 from "../assets/images/bad5.jpg";
+import Render2 from "../assets/images/bad5-new.jpg";
+import Original3 from "../assets/images/badinterior.jpg";
+import Render3 from "../assets/images/badinterior-new.jpg";
 
 import axiosClient from "../axios-client";
 
@@ -672,7 +678,7 @@ export default function Visiondash() {
                     </>
                   )}
 
-                  {!loadingRenders &&
+                  {/* {!loadingRenders &&
                     publicRenders.map((pair) => (
                       <div className="flex sm:space-x-4 sm:flex-row flex-col mb-6">
                         <div className="relative inline-block overflow-hidden ">
@@ -707,7 +713,95 @@ export default function Visiondash() {
                           </a>
                         </div>
                       </div>
-                    ))}
+                    ))} */}
+                  {!loadingRenders && (
+                    <>
+                      <div className="flex sm:space-x-4 sm:flex-row flex-col mb-6">
+                        <div className="relative inline-block overflow-hidden ">
+                          <div className="absolute bg-slate-900 bg-opacity-60 bottom-0 right-0 z-10 mb-1 font-light text-sm text-white">
+                            Original Photo
+                          </div>
+                          <img
+                            alt="original photo"
+                            src={Original1}
+                            className="rounded-2xl relative object-cover"
+                            width={475}
+                            height={475}
+                          />
+                        </div>
+                        <div className="relative inline-block overflow-hidden sm:mt-0 mt-8">
+                          <div className="absolute bg-slate-900 bg-opacity-60 bottom-0 right-0 z-10 mb-1 font-light text-sm text-white">
+                            Original render
+                          </div>
+                          <a href={Render1} target="_blank" rel="noreferrer">
+                            <img
+                              alt="restored photo"
+                              src={Render1}
+                              className="rounded-2xl relative sm:mt-0 mt-2 cursor-zoom-in"
+                              width={475}
+                              height={475}
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div className="flex sm:space-x-4 sm:flex-row flex-col mb-6">
+                        <div className="relative inline-block overflow-hidden ">
+                          <div className="absolute bg-slate-900 bg-opacity-60 bottom-0 right-0 z-10 mb-1 font-light text-sm text-white">
+                            Original Photo
+                          </div>
+                          <img
+                            alt="original photo"
+                            src={Original2}
+                            className="rounded-2xl relative object-cover"
+                            width={475}
+                            height={475}
+                          />
+                        </div>
+                        <div className="relative inline-block overflow-hidden sm:mt-0 mt-8">
+                          <div className="absolute bg-slate-900 bg-opacity-60 bottom-0 right-0 z-10 mb-1 font-light text-sm text-white">
+                            Original render
+                          </div>
+                          <a href={Render2} target="_blank" rel="noreferrer">
+                            <img
+                              alt="restored photo"
+                              src={Render2}
+                              className="rounded-2xl relative sm:mt-0 mt-2 cursor-zoom-in"
+                              width={475}
+                              height={475}
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div className="flex sm:space-x-4 sm:flex-row flex-col mb-6">
+                        <div className="relative inline-block overflow-hidden ">
+                          <div className="absolute bg-slate-900 bg-opacity-60 bottom-0 right-0 z-10 mb-1 font-light text-sm text-white">
+                            Original Photo
+                          </div>
+                          <img
+                            alt="original photo"
+                            src={Original3}
+                            className="rounded-2xl relative object-cover"
+                            width={475}
+                            height={475}
+                          />
+                        </div>
+                        <div className="relative inline-block overflow-hidden sm:mt-0 mt-8">
+                          <div className="absolute bg-slate-900 bg-opacity-60 bottom-0 right-0 z-10 mb-1 font-light text-sm text-white">
+                            Original render
+                          </div>
+                          <a href={Render3} target="_blank" rel="noreferrer">
+                            <img
+                              alt="restored photo"
+                              src={Render3}
+                              className="rounded-2xl relative sm:mt-0 mt-2 cursor-zoom-in"
+                              width={475}
+                              height={475}
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
               </>
             )}
