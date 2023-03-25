@@ -11,7 +11,7 @@ const Hero = () => {
                 happy users
             </p> */}
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-white sm:text-7xl">
-        Revolutionize your home design process
+        Transform your space into a masterpiece
         <span className="relative  ">
           <span className="relative text_rgb"> with AI</span>
         </span>{" "}
