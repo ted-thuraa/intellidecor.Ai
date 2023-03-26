@@ -1,4 +1,5 @@
 import styles from "../../style";
+import { Link, Navigate, Outlet } from "react-router-dom";
 
 const Hero = () => {
   return (
