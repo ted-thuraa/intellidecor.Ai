@@ -241,6 +241,9 @@ export default function AdminLayout() {
                 <li>
                   <Link
                     to="/admin/dashboard"
+                    onClick={(ev) => {
+                      _setSidebarOpen(ev);
+                    }}
                     class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     <svg
@@ -265,6 +268,9 @@ export default function AdminLayout() {
                 <li>
                   <Link
                     to="/admin/users"
+                    onClick={(ev) => {
+                      _setSidebarOpen(ev);
+                    }}
                     class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     <svg
@@ -288,6 +294,9 @@ export default function AdminLayout() {
                 <li>
                   <Link
                     to="/admin/payments"
+                    onClick={(ev) => {
+                      _setSidebarOpen(ev);
+                    }}
                     class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     <svg
@@ -315,6 +324,9 @@ export default function AdminLayout() {
                 <li>
                   <Link
                     to="/admin/plans"
+                    onClick={(ev) => {
+                      _setSidebarOpen(ev);
+                    }}
                     class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     <svg
