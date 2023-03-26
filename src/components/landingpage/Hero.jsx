@@ -23,20 +23,20 @@ const Hero = () => {
       </p>
       <div className="flex items-center flex-row">
         <div className="flex justify-center space-x-4 mr-5">
-          <a
+          <Link
             className="bg-white rounded-xl text-gray-900 font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-gray-200"
-            href="/restore"
+            href="/"
           >
             Watch demo
-          </a>
+          </Link>
         </div>
         <div className="flex justify-center space-x-4">
-          <a
+          <Link
             className="bg-rgb rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
             href="/design"
           >
             Try for free
-          </a>
+          </Link>
         </div>
       </div>
 
