@@ -308,7 +308,7 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel
           focus="true"
-          className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto background_bluish px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto background_bluish px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
         >
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
@@ -363,10 +363,10 @@ export default function Header() {
                   Dashboard
                 </Link>
                 <Link
-                  to="/"
+                  to="/admin"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-200 hover:bg-gray-500"
                 >
-                  Blog
+                  Admin
                 </Link>
                 <Link
                   to="/pricing"
