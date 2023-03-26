@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="flex justify-center space-x-4">
           <Link
             className="bg-rgb rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
-            href="/design"
+            to="/design"
           >
             Try for free
           </Link>
