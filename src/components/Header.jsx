@@ -94,7 +94,7 @@ export default function Header() {
   return (
     <header className=" w-full">
       <nav
-        className="mx-auto fixed flex items-center justify-between p-4 lg:px-8  !bg-opacity-90 !backdrop-blur-lg !shadow-sm  w-full navbar top-0 d-none-mobile-app inset-x-0"
+        className="mx-auto fixed flex items-center justify-between p-4 lg:px-8  !bg-opacity-90 !backdrop-blur-lg !shadow-sm  w-full z-10 top-0 d-none-mobile-app inset-x-0"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
