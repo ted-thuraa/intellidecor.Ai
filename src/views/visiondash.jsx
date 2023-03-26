@@ -678,7 +678,7 @@ export default function Visiondash() {
                     </>
                   )}
 
-                  {!loadingRenders &&
+                  {/* {!loadingRenders &&
                     publicRenders.map((pair) => (
                       <div className="flex sm:space-x-4 sm:flex-row flex-col mb-6">
                         <div className="relative inline-block overflow-hidden ">
@@ -713,8 +713,8 @@ export default function Visiondash() {
                           </a>
                         </div>
                       </div>
-                    ))}
-                  {/* {!loadingRenders && (
+                    ))} */}
+                  {!loadingRenders && (
                     <>
                       <div className="flex sm:space-x-4 sm:flex-row flex-col mb-6">
                         <div className="relative inline-block overflow-hidden ">
@@ -801,7 +801,7 @@ export default function Visiondash() {
                         </div>
                       </div>
                     </>
-                  )} */}
+                  )}
                 </div>
               </>
             )}
