@@ -73,14 +73,12 @@ export default function Header() {
     axiosClient
       .get("/user")
       .then(({ data }) => {
-        console.log(data);
         setEmail(data.email);
       })
       .catch((err) => {
         console.log(err);
       });
   };
-  console.log(email);
 
   const onLogout = (ev) => {
     ev.preventDefault();
@@ -90,7 +88,7 @@ export default function Header() {
       setToken(null);
     });
   };
-  console.log(token);
+
   return (
     <header className=" w-full">
       <nav

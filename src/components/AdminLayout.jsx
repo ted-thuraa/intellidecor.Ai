@@ -156,7 +156,63 @@ export default function AdminLayout() {
                   )}
 
                   <Link to="/" className="-m-1.5 p-1.5 flex items-center">
-                    <img className="h-10 w-10 logo_rgb" src={logo} alt="logo" />
+                    <svg
+                      class="w-12 h-12 mr-2 text-gray-800 stroke-gray-800"
+                      viewBox="0 0 2170 2696"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        x1="1092"
+                        y1="227.437"
+                        x2="123.037"
+                        y2="1196.4"
+                        stroke-width="174"
+                        stroke-linecap="round"
+                      />
+                      <line
+                        x1="793"
+                        y1="1055"
+                        x2="793"
+                        y2="2176"
+                        stroke-width="174"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M1519 87L1519 2609"
+                        stroke-width="174"
+                        stroke-linecap="round"
+                      />
+                      <line
+                        x1="1905.05"
+                        y1="1400.93"
+                        x2="1910.93"
+                        y2="1882.95"
+                        stroke-width="174"
+                        stroke-linecap="round"
+                      />
+                      <line
+                        x1="385.082"
+                        y1="1400.93"
+                        x2="390.96"
+                        y2="1882.95"
+                        stroke-width="174"
+                        stroke-linecap="round"
+                      />
+                      <line
+                        x1="1132"
+                        y1="654"
+                        x2="1132"
+                        y2="2426"
+                        stroke-width="174"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M2083 1173.96L1114.04 204.999"
+                        stroke-width="174"
+                        stroke-linecap="round"
+                      />
+                    </svg>
                     <span className="text-slate-300 logo_rgb sm:text-3xl text-2xl font-bold ml-2 tracking-tight">
                       Intellidecor.Ai
                     </span>
@@ -374,8 +430,11 @@ export default function AdminLayout() {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/admin/renders"
+                    onClick={(ev) => {
+                      _setSidebarOpen(ev);
+                    }}
                     class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     <svg
@@ -396,7 +455,7 @@ export default function AdminLayout() {
                     <span class="flex-1 ml-3 whitespace-nowrap">
                       Generated renders
                     </span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

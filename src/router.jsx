@@ -16,6 +16,7 @@ import Clients from "./components/Admin/Clients";
 import ClientForm from "./components/Admin/ClientForm";
 import Plans from "./views/Plans";
 import Products from "./components/Admin/Products";
+import Renders from "./components/Admin/Renders";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
       {
         path: "/admin/plans",
         element: <Products />,
+      },
+      {
+        path: "/admin/renders",
+        element: <Renders />,
       },
     ],
   },

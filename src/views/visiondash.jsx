@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useStateContext } from "../contexts/ContextProvider";
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Skeleton from "../components/skeleton";
 import DropZone from "../components/DropZone";
@@ -18,6 +18,8 @@ import axiosClient from "../axios-client";
 
 export default function Visiondash() {
   const { token } = useStateContext();
+  const navigate = useNavigate();
+
   if (!token) {
     return <Navigate to="/login" />;
   }
@@ -53,7 +55,6 @@ export default function Visiondash() {
       .then(({ data }) => {
         setLoadingRenders(false);
         setPublicRenders(data.data);
-        console.log(data);
       })
       .catch((err) => {
         setLoadingRenders(false);
@@ -94,19 +95,31 @@ export default function Visiondash() {
 
   const setRenders = (ev) => {
     setRendersValue(ev.target.value);
+    if (ev.target.value === "4") {
+      navigate("/pricing");
+    }
   };
 
   const setResolution = (ev) => {
     setResolutionValue(ev.target.value);
+    if (ev.target.value === "High") {
+      navigate("/pricing");
+    }
   };
 
   const setPrivacy = (ev) => {
     setPrivacyValue(ev.target.value);
+    if (ev.target.value === "Private") {
+      navigate("/pricing");
+    }
   };
 
-  const ifError = (err) => {
-    setError(err);
+  const _setError = (message) => {
+    setError(message);
     setLoading(false);
+    setTimeout(() => {
+      setError(null);
+    }, 5000);
   };
 
   const setRestoredPhoto = (img) => {
@@ -162,12 +175,12 @@ export default function Visiondash() {
 
       if (response && response.status == 429) {
         if (response.data.message) {
-          ifError(
+          _setError(
             "You have reached today's limit buy the app to get the full experience"
           );
         }
       } else if (response && response.status == 500) {
-        ifError("Failed");
+        _setError("Failed");
       }
     }
   };
@@ -179,11 +192,11 @@ export default function Visiondash() {
         await getStatus(id);
       }, 1000);
     } else if (res.data.status == "failed") {
-      ifError("failed");
+      _setError("failed");
       return;
     } else if (res && res.status == 429) {
       if (res.data.message) {
-        ifError("took too long try again later");
+        _setError("took too long try again later");
       }
       return;
     } else {
@@ -421,7 +434,7 @@ export default function Visiondash() {
                   <DropZone
                     onRestoredImgChange={setRestoredPhoto}
                     onOriginalImgChange={setOriginalImg}
-                    onError={ifError}
+                    onError={setError}
                   />
                 )}
                 {originalPhoto && !restoredImage && !loading && (
