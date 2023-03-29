@@ -35,6 +35,7 @@ export default function Clients() {
 
   const unToggle = (ev) => {
     setToggleForm(false);
+    getUsers();
   };
 
   const onDelete = (client) => {

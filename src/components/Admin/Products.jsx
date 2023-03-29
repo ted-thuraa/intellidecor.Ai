@@ -35,6 +35,7 @@ export default function Products() {
 
   const unToggle = (ev) => {
     setToggleForm(false);
+    getPlans();
   };
 
   const onDelete = (plan) => {
@@ -44,7 +45,6 @@ export default function Products() {
 
     axiosClient.delete(`/admin/plans/${plan.id}`).then(() => {
       //Notify
-      getUsers();
       getPlans();
     });
   };
