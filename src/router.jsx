@@ -17,6 +17,7 @@ import ClientForm from "./components/Admin/ClientForm";
 import Plans from "./views/Plans";
 import Products from "./components/Admin/Products";
 import Renders from "./components/Admin/Renders";
+import PaymentFailed from "./views/paymentFailed";
 
 const router = createBrowserRouter([
   {
@@ -32,8 +33,12 @@ const router = createBrowserRouter([
     element: <Plans />,
   },
   {
-    path: "/success",
+    path: "/checkout",
     element: <PaymentSuccess />,
+  },
+  {
+    path: "/checkout",
+    element: <PaymentFailed />,
   },
   {
     path: "/admin",
